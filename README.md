@@ -135,7 +135,7 @@ Since the Flask server runs locally, we use **ngrok** to expose the server to th
 ### Step 1: Clone the Repository
 Clone this repository to your local machine:
 ```bash
-git clone https://github.com/your-username/Query_and_Image_Based_Product_Search_and_Virtual_TryOn_For_Ecom_Business_with_Whatsapp_Integration.git
+git clone https://github.com/king-ali/Query_and_Image_Based_Product_Search_and_Virtual_TryOn_For_Ecom_Business_with_Whatsapp_Integration.git
 cd Query_and_Image_Based_Product_Search_and_Virtual_TryOn_For_Ecom_Business_with_Whatsapp_Integration
 ```
 
@@ -158,3 +158,49 @@ Start the Flask server to run the application:
 ```bash
 python app.py
 ```
+
+## Results
+
+For demo purpose we have used the [Open Fashion Product Images dataset](https://www.kaggle.com/datasets/paramaggarwal/fashion-product-images-small), consisting of ~44K fashion products with images and category labels describing the products, however the specific brand outfits can be used the same way.
+
+### Query based search
+<img src="/results_img/text.jpg" width="200" height="400">
+
+### Image based search
+<img src="/results_img/image.jpg" width="200" height="400">
+
+### Virtual try-on
+<img src="/results_img/tryon.jpg" width="200" height="400">
+
+---
+
+## Future Work
+This project has successfully demonstrated the capability of using CLIP, PINECONE and try-on model for business need. Future work will include following.
+
+- Instead of using dataset from Kaggle, using some brand specific dataset and creating image-caption pair to create embedding space.
+- Working on using more robust try-on pipeline that can do all types of garments including pants.
+- Deploying this pipeline on cloud instead of using free tiers to get faster response and smooth working.
+- Enchancing Whatsapp agent. This repo use a simple whatsppp agent for demo, however a more intractive agents can be made for better customer experience.
+
+--- 
+## Conclusion
+
+This project is designed for the e-commerce experience by providing intuitive text and image-based product search combined with virtual try-on functionality and WhatsApp integration, it offers a seamless and user-friendly interface for customers, enhancing their shopping experience and driving engagement for businesses.
+
+--- 
+## Tech Stack
+This project leverages the following technologies:
+
+- **Twilio**: For WhatsApp integration to handle user interactions.
+- **ngrok**: To expose the local server for external communication via a secure tunnel.
+- **Pinecone**: For managing vector databases and enabling fast similarity searches.
+- **Flask**: As the web framework for building the backend server.
+- **Hugging Face**: For utilizing pre-trained models like CLIP and the Nymbo Virtual Try-On API.
+- **Gradio**: To interact with the virtual try-on model.
+- **CLIP**: For generating embeddings from images and text for similarity searches.
+- **SentenceTransformers**: For text-based embedding generation.
+- **OpenCV**: For image processing tasks.
+- **NumPy**: For handling numerical operations and arrays.
+  
+--- 
+
